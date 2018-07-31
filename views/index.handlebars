@@ -1,0 +1,51 @@
+<div class="main-container">
+    <div class="container">
+        <div class="centered" class="list">
+                <h1 style="font-family: 'helvetica', text-align: center; color: rgb(0, 225, 255) ">Gotta Eat Them All</h1>
+            <ul class="list-group" style="align-text: center;
+	align-content: center; ">
+                {{#each burgers}} {{#unless this.devoured}}
+                <li class="list-group-item list-group-item">
+                    {{this.burger_name}}
+
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="true">
+                       
+                        <button type="submit" class="btn btn-info">Eat The Burger</button>
+                    </form>
+                </li>
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="centered" class="list">
+            <h1 style="font-family: 'helvetica', text-align: center; color: rgb(0, 225, 255) ">Burgers Eaten</h1>
+            <ul class="list-group">
+                {{#each burgers}} {{#if this.devoured}}
+                <li class="list-group-item list-group-item-warning">
+                    {{this.burger_name}}
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="false">
+                    </form>
+                </li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="centered" class="list">
+            <h1 style="font-family: 'helvetica', text-align: center; cursive; color: rgb(0, 225, 255) ">Build A Burger</h1>
+            <form class="create-update-form" action="/" method="POST">
+                <div class="form-group">
+                    <label for="burger">Burger Name:</label>
+                    <br>
+                    <input style="border-radius: 10px" type="text" id="burger" class="user-burgername" name="name" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <button type="submit" class="btn btn-info">Add Burger</button>
+            </form>
+        </div>
+    </div>
+</div>

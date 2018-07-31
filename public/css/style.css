@@ -1,0 +1,52 @@
+h1 {
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+}
+
+.label {
+    font-weight: bold;
+}
+
+.create-update-form {
+    margin: 5px;
+    padding: 5px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+body {
+   background: url("../../img/burger.jpeg");
+  background-image: img
+}
+
+.main-container {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+    align-content: center;
+}
+
+li {
+    margin-right: 100px;
+    margin-left: 100px;
+    display: inline-block;
+}
+
+
+.container {
+    background-color: rgba(226, 238, 115, 0.507);
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 5px black;
+    align-content: center;
+}
+
+.main-container {
+    padding: 17px;
+}
+
